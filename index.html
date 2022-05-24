@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #desh{
+    padding: 1% 2% 1% 2%; 
+    margin: 2% 0% 0% 5%;
+background-color: hotpink;
+border-radius: 5%;
+color: black;
+font-size: medium;
+  
+}
+    </style>
+</head>
+<body>
+    <div id="navbar">
+        <p></p>
+    </div>
+    <button id="desh"><a href="./deshboard.html">DESHBOARD</a></button>
+    <h1 style="color: blue;">Add Student Data</h1>
+    <form id="student_data" onsubmit="storeData(event)">
+<input type="text" id="name" placeholder="Name"/>
+<input type="text" id="course" placeholder="Course"/>
+<input type="number" id="unit" placeholder="Unit">
+<input type="text" id="image" placeholder="Image"/>
+<input type="number" id="batch" placeholder="ft-web Batch No."/>
+<input type="submit"/>
+</form>
+</body>
+</html>
+<script src="./script/index.js"></script>
