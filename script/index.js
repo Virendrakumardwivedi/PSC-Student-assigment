@@ -20,6 +20,7 @@ function storeData(e){
   data.push(s1)
   localStorage.setItem("students",JSON.stringify(data));
   console.log(s1)
+  window.location.reload();
 
 }
 function calculate(){
@@ -28,9 +29,11 @@ function calculate(){
     for(let i=0; i<data.length; i++){
         if(obj[data[i].batch]==undefined){
             obj[data[i].batch]=1
+           
         }
         else{
             obj[data[i].batch] +=1
+          
         }
     }
     let top = document.getElementById("navbar");
@@ -38,6 +41,7 @@ function calculate(){
         let p = document.createElement("p")
         p.append(i,"--",obj[i])
         top.append(p)
+       
     }
     console.log(obj)
 }

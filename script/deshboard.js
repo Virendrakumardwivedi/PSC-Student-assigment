@@ -1,9 +1,12 @@
 append();
 
 function append(){
-    console.log("yes")
+   // console.log("yes")
     let data=JSON.parse(localStorage.getItem("students")) || [];
     let container = document.getElementById("container")
+
+    let trash=JSON.parse(localStorage.getItem("trash"))||[];
+    
      
     data.forEach(function(el, index){
         let div= document.createElement("div")
@@ -31,6 +34,7 @@ function append(){
        btn.setAttribute("id","remov")
        btn.addEventListener("click",function(){
            remove(index);
+           window.location.reload();
        });
        div.append(img,na, batch,course,unit,btn);
        container.append(div);
@@ -45,6 +49,7 @@ let newData = data.filter(function(el , i){
         let trash = JSON.parse(localStorage.getItem("trash"))||[];
     trash.push(el);
     localStorage.setItem("trash",JSON.stringify(trash));
+   
     }
     else{
         return i!==index;
